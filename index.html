@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C6 Z06 Build Configurator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">🏎️ C6 Z06 Build Configurator</a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Build Options</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label class="form-label">Engine Configuration</label>
+                            <select class="form-select" id="engineSelect">
+                                <option value="">Select Engine...</option>
+                                <option value="ls6">6.0L LSx (~1000hp)</option>
+                                <option value="dart427">Dart 427 (~1500hp)</option>
+                                <option value="dart454">Dart 454 (~1500hp)</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Turbo Configuration</label>
+                            <select class="form-select" id="turboSelect">
+                                <option value="">Select Turbo Setup...</option>
+                                <option value="rear">Rear Mount Single</option>
+                                <option value="front">Front Mount Single</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Fuel System</label>
+                            <select class="form-select" id="fuelSelect">
+                                <option value="">Select Fuel System...</option>
+                                <option value="base">Base (~800hp)</option>
+                                <option value="medium">Medium (~1000hp)</option>
+                                <option value="max">Maximum (~1500hp)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Parts List</h5>
+                        <div>
+                            <span class="badge bg-primary" id="totalCost">Total: $0</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover" id="partsTable">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Part Name</th>
+                                        <th>Part Number</th>
+                                        <th>Quantity</th>
+                                        <th>Cost</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Parts will be populated here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
